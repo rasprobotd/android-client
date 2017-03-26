@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">rasprobotdcli</string>
+    <string name="search_and_connect">Найти и подключиться</string>
+    <string name="searching">Поиск...</string>
+</resources>
