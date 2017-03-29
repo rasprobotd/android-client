@@ -3,13 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/background_light"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.seakg.rasprobotcli.MainActivity"
-    android:background="#222"
-    android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+    android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+    tools:context="com.seakg.rasprobotcli.MainActivity">
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -47,7 +47,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:text="RaspRobotD Client"
-            android:textColor="@android:color/background_light"
+            android:textColor="@android:color/black"
             android:textSize="28sp" />
 
         <Button
@@ -59,6 +59,8 @@
             android:layout_gravity="center_vertical|center_horizontal|center"
             android:layout_marginLeft="0dp"
             android:layout_marginTop="0dp"
+            android:background="@drawable/rounded_button"
+            android:padding="10dp"
             android:text="@string/search_and_connect" />
 
     </FrameLayout>
