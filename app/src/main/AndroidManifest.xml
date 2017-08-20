@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.seakg.rasprobotcli">
+    package="com.seakg.sopovrobotics">
     <permission android:name="android.permission.INTERNET"/>
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -18,7 +18,7 @@
         android:theme="@style/AppTheme">
 
         <activity
-            android:name=".MainActivity"
+            android:name="com.seakg.sopovrobotics.MainActivity"
             android:hardwareAccelerated="true"
             android:screenOrientation="landscape">
             <intent-filter>
@@ -29,13 +29,13 @@
         </activity>
 
         <!-- Receive Wi-Fi connection state changes -->
-        <receiver android:name=".WifiReceiver">
+        <receiver android:name="com.seakg.sopovrobotics.WifiReceiver">
             <intent-filter>
                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
             </intent-filter>
         </receiver>
 
-        <activity android:name=".ControlsActivity"
+        <activity android:name="com.seakg.sopovrobotics.ControlsActivity"
             android:hardwareAccelerated="true"
             android:screenOrientation="landscape"></activity>
     </application>

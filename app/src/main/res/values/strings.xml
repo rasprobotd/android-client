@@ -1,5 +1,9 @@
 <resources>
-    <string name="app_name">rasprobotdcli</string>
+    <string name="app_name">SopovRobotics</string>
     <string name="search_and_connect">Search and connect</string>
-    <string name="searching">Searching...</string>
+    <string name="searching">Searching…</string>
+    <string name="assamble_the_robot">Assamble the robot</string>
+    <string name="start_auto_control">Start Auto-control</string>
+    <string name="stop_auto_control">Stop Auto-control</string>
+
 </resources>

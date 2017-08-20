@@ -1,4 +1,4 @@
-package com.seakg.rasprobotcli;
+package com.seakg.sopovrobotics;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

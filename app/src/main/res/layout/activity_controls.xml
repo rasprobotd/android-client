@@ -10,57 +10,16 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.seakg.rasprobotcli.ControlsActivity">
-
-    <Button
-        android:id="@+id/btn_left"
-        android:layout_width="70dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/rounded_button"
-        android:text="Left"
-        android:layout_below="@+id/textView_status"
-        android:layout_alignRight="@+id/btn_autodriver"
-        android:layout_marginRight="77dp"
-        android:layout_marginTop="21dp" />
-
-    <Button
-        android:id="@+id/btn_forward"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/btn_left"
-        android:layout_toLeftOf="@+id/btn_right"
-        android:background="@drawable/rounded_button"
-        android:text="Forward" />
-
-    <Button
-        android:id="@+id/btn_backward"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="23dp"
-        android:layout_marginLeft="42dp"
-        android:background="@drawable/rounded_button"
-        android:text="Backward"
-        android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/btn_left" />
+    tools:context="com.seakg.sopovrobotics.ControlsActivity">
 
     <Button
         android:id="@+id/btn_autodriver"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:layout_below="@+id/btn_right"
-        android:layout_marginRight="39dp"
         android:background="@drawable/rounded_button"
-        android:text="Auto Driver" />
-
-    <Button
-        android:id="@+id/btn_right"
-        android:layout_width="70dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btn_forward"
-        android:layout_toRightOf="@+id/btn_backward"
-        android:background="@drawable/rounded_button"
-        android:text="Right" />
+        android:text="@string/start_auto_control" />
 
     <TextView
         android:id="@+id/textView_status"
@@ -84,7 +43,7 @@
         android:textColorLink="@android:color/black"
         android:textSize="25sp" />
 
-    <com.seakg.rasprobotcli.Components.DriverControls
+    <com.seakg.sopovrobotics.Components.DriverControls
         android:id="@+id/driverControls"
         android:layout_width="200dp"
         android:layout_height="200dp"

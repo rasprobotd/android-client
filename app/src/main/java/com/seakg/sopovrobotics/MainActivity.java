@@ -1,4 +1,4 @@
-package com.seakg.rasprobotcli;
+package com.seakg.sopovrobotics;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -6,8 +6,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 
-import com.seakg.rasprobotcli.Controllers.RaspRobotDController;
-import com.seakg.rasprobotcli.Tasks.SearchAndConnectTask;
+import com.seakg.sopovrobotics.Tasks.SearchAndConnectTask;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = MainActivity.class.getSimpleName();

@@ -9,7 +9,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-    tools:context="com.seakg.rasprobotcli.MainActivity">
+    tools:context="com.seakg.sopovrobotics.MainActivity">
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -46,22 +46,48 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="RaspRobotD Client"
+            android:text="@string/app_name"
             android:textColor="@android:color/black"
             android:textSize="28sp" />
 
-        <Button
-            android:id="@+id/btn_search_and_connect"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
             android:layout_gravity="center_vertical|center_horizontal|center"
-            android:layout_marginLeft="0dp"
-            android:layout_marginTop="0dp"
-            android:background="@drawable/rounded_button"
-            android:padding="10dp"
-            android:text="@string/search_and_connect" />
+            android:gravity="center_vertical|center"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <Button
+                android:id="@+id/btn_search_and_connect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="center_vertical|center_horizontal|center"
+                android:layout_margin="10dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_button"
+                android:padding="10dp"
+                android:text="@string/search_and_connect" />
+
+            <Button
+                android:id="@+id/btn_assamble_the_robot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="center_vertical|center_horizontal|center"
+                android:layout_margin="10dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_button"
+                android:padding="10dp"
+                android:text="@string/assamble_the_robot" />
+        </LinearLayout>
 
     </FrameLayout>
 

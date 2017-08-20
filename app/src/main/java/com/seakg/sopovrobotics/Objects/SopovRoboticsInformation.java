@@ -1,9 +1,9 @@
-package com.seakg.rasprobotcli.Objects;
+package com.seakg.sopovrobotics.Objects;
 
 import org.json.JSONObject;
 
-public class RaspRobotDInformation {
-    public RaspRobotDInformation(JSONObject obj){
+public class SopovRoboticsInformation {
+    public SopovRoboticsInformation(JSONObject obj){
 
     }
     public String name(){

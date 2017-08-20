@@ -1,8 +1,8 @@
-package com.seakg.rasprobotcli.Interfaces;
+package com.seakg.sopovrobotics.Interfaces;
 
 import org.json.JSONObject;
 
-public interface RaspRobotDListener {
+public interface SopovRoboticsListener {
     void onGotInformation(JSONObject obj);
     void onConnected();
     void onDisconnected();

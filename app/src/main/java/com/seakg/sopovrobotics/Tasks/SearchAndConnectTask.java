@@ -1,13 +1,13 @@
-package com.seakg.rasprobotcli.Tasks;
+package com.seakg.sopovrobotics.Tasks;
 
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.seakg.rasprobotcli.Controllers.RaspRobotDController;
-import com.seakg.rasprobotcli.ControlsActivity;
-import com.seakg.rasprobotcli.MainActivity;
+import com.seakg.sopovrobotics.Controllers.SopovRoboticsController;
+import com.seakg.sopovrobotics.ControlsActivity;
+import com.seakg.sopovrobotics.MainActivity;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -37,7 +37,7 @@ public class SearchAndConnectTask extends AsyncTask<Void, Void, ArrayList<String
             Log.i(TAG, "Check ip: " + ip);
             try {
                 Socket testClient;
-                testClient = new Socket(ip, RaspRobotDController.PORT);
+                testClient = new Socket(ip, SopovRoboticsController.PORT);
                 if (testClient.isConnected()) {
                     if(!found_ips.contains(ip)){
                         Log.i(TAG, "Found: " + ip);
@@ -61,7 +61,7 @@ public class SearchAndConnectTask extends AsyncTask<Void, Void, ArrayList<String
         mMainActivity.hideProgress();
 
         if(result.size() == 1){
-            RaspRobotDController rrd = RaspRobotDController.getInstance();
+            SopovRoboticsController rrd = SopovRoboticsController.getInstance();
             rrd.setIp(result.get(0));
             Intent intent = new Intent(mMainActivity, ControlsActivity.class);
             mMainActivity.startActivity(intent);

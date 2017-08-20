@@ -1,4 +1,4 @@
-package com.seakg.rasprobotcli.Components;
+package com.seakg.sopovrobotics.Components;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -33,6 +33,8 @@ public class DriverControls extends android.support.v7.widget.AppCompatImageView
     private Path mPathArrowRight = null;
     private Path mPathArrowBottom = null;
     private String mLatestCommand = "";
+    private DriverControlsListener mListener = null;
+
     public DriverControls(Context context) {
         super(context);
         init();
@@ -200,11 +202,17 @@ public class DriverControls extends android.support.v7.widget.AppCompatImageView
         return false;
     }
 
+    public void setListener(DriverControlsListener listener){
+        mListener = listener;
+    }
+
     private void sendCommand(String cmd){
         if(!mLatestCommand.equals(cmd)){
             Log.i(TAG, cmd);
             mLatestCommand = cmd;
+            if(mListener != null){
+                mListener.driveCommand(cmd);
+            }
         }
-
     }
 }

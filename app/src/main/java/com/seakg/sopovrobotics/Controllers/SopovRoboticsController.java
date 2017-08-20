@@ -1,4 +1,4 @@
-package com.seakg.rasprobotcli.Controllers;
+package com.seakg.sopovrobotics.Controllers;
 
 import android.util.Log;
 
@@ -6,7 +6,7 @@ import com.firebase.tubesock.WebSocket;
 import com.firebase.tubesock.WebSocketEventHandler;
 import com.firebase.tubesock.WebSocketException;
 import com.firebase.tubesock.WebSocketMessage;
-import com.seakg.rasprobotcli.Interfaces.RaspRobotDListener;
+import com.seakg.sopovrobotics.Interfaces.SopovRoboticsListener;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -14,18 +14,18 @@ import org.json.JSONObject;
 import java.net.URI;
 import java.net.URISyntaxException;
 
-public class RaspRobotDController implements WebSocketEventHandler {
-    private final static String TAG = RaspRobotDController.class.getSimpleName();
-    private static RaspRobotDController mInstance = null;
+public class SopovRoboticsController implements WebSocketEventHandler {
+    private final static String TAG = SopovRoboticsController.class.getSimpleName();
+    private static SopovRoboticsController mInstance = null;
     public static int PORT = 1234;
     private String mIP = "";
     private WebSocket mWebSocket = null;
     private boolean mOpened = false;
-    private RaspRobotDListener mListener = null;
+    private SopovRoboticsListener mListener = null;
 
-    public static RaspRobotDController getInstance(){
+    public static SopovRoboticsController getInstance(){
         if(mInstance == null){
-            mInstance = new RaspRobotDController();
+            mInstance = new SopovRoboticsController();
         }
         return mInstance;
     }
@@ -39,7 +39,7 @@ public class RaspRobotDController implements WebSocketEventHandler {
     }
 
     public void connect(){
-        String url1 = "ws://" + mIP + ":1234/";
+        String url1 = "ws://" + mIP + ":7528/";
         Log.i(TAG, "Try connect to " + url1);
         URI uri = null;
         try {
@@ -62,7 +62,7 @@ public class RaspRobotDController implements WebSocketEventHandler {
         return mOpened;
     }
 
-    public void setListener(RaspRobotDListener listener){
+    public void setListener(SopovRoboticsListener listener){
         mListener = listener;
     }
 
